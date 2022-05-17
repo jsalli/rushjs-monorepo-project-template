@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "package-a/*": ["package-a/src"],
+      "package-b/*": ["package-b/src"],
+      "package-c/*": ["morePackagesInsideHere/package-c/src"]
+    }
+  },
+  "include": ["**/src/**/*"],
+  "exclude": [
+    "**/dist",
+    "**/node_modules"
+  ]
+}
